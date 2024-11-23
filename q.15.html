@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Navigation Styling</title>
+  <style>
+    
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #f4f4f4;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    nav .section-1 a {
+      color: blue;
+    }
+
+    nav .section-2 a {
+      color: green; 
+    }
+
+    nav .section-3 a {
+      color: purple;
+    }
+
+    
+    nav > .section-1 > a,
+    nav > .section-2 > a,
+    nav > .section-3 > a {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    
+    nav a:hover {
+      color: darkorange;
+      text-decoration: none;
+    }
+
+    
+    nav a:active {
+      color: red;
+    }
+
+    
+    nav a[href^="https"] {
+      color: darkred !important;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    
+    <div class="section-1">
+      <a href="https://google.com">Google</a>
+      <a href="https://facebook.com">Facebook</a>
+      <a href="/home">Home</a>
+    </div>
+
+    
+    <div class="section-2">
+      <a href="/about">About Us</a>
+      <a href="https://masai.com">Masai</a>
+      <a href="/services">Services</a>
+    </div>
+
+
+    <div class="section-3">
+      <a href="/contact">Contact Us</a>
+      <a href="https://twitter.com">Twitter</a>
+      <a href="/support">Support</a>
+    </div>
+  </nav>
+</body>
+</html>
